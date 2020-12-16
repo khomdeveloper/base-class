@@ -9,7 +9,8 @@
             "email": "khom.developer@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
+    "version": "1.0.0",
+    "minimum-stability": "1.0.0",
     "require": {},
     "require-dev": {
         "phpunit/phpunit": "^9"
