@@ -1,7 +1,7 @@
 <?php
 
 
-namespace valera261104\BaseClass\Services;
+namespace BaseClass;
 
 
 class StringService

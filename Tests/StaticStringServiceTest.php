@@ -1,8 +1,9 @@
 <?php
 
-namespace valera261104\BaseClass\Tests;
+namespace BaseClass\Tests;
 
-use valera261104\BaseClass\Services\StaticStringService;
+
+use BaseClass\StaticStringService;
 
 class StaticStringServiceTest extends \PHPUnit\Framework\TestCase
 {

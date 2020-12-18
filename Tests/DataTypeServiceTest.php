@@ -1,11 +1,12 @@
 <?php
 
 
-namespace valera261104\BaseClass\Tests;
+namespace BaseClass\Tests;
 
 
+use BaseClass\DataTypeService;
 use PHPUnit\Framework\TestCase;
-use valera261104\BaseClass\Services\DataTypeService;
+
 
 class DataTypeServiceTest extends TestCase
 {

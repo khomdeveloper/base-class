@@ -15,9 +15,8 @@
         "phpunit/phpunit": "^9"
     },
     "autoload": {
-        "classmap": [
-            "Services/",
-            "Tests/"
-        ]
+        "psr-4": {
+            "BaseClass\\": "Source"
+        }
     }
 }
