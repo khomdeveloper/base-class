@@ -4,9 +4,6 @@
 namespace BaseClass;
 
 
-use BaseClass\Services\PathService;
-use BaseClass\Services\StaticStringService;
-
 abstract class BaseClass
 {
 

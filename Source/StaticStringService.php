@@ -65,4 +65,13 @@ class StaticStringService
 
     }
 
+    public static function isRegex($pattern)
+    {
+        if (@preg_match($pattern, null) === false) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
 }
