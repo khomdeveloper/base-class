@@ -7,7 +7,7 @@ namespace BaseClass;
 class StaticStringService
 {
 
-    public static function addFirstSlash(string $string):string
+    public static function addFirstSlash(?string $string):string
     {
         if (empty($string)) {
             return '/';
@@ -15,6 +15,17 @@ class StaticStringService
             return '/' . $string;
         } else {
             return $string;
+        }
+    }
+
+    public static function removeFinalSlash(?string $string): string
+    {
+        if (empty($string)) {
+            return '/';
+        } elseif ($string === '/') {
+            return '/';
+        } else {
+            return rtrim($string,'/');
         }
     }
 
