@@ -7,6 +7,10 @@ namespace BaseClass;
 class StaticStringService
 {
 
+    /**
+     * @param string|null $string
+     * @return string
+     */
     public static function addFirstSlash(?string $string):string
     {
         if (empty($string)) {
@@ -18,6 +22,10 @@ class StaticStringService
         }
     }
 
+    /**
+     * @param string|null $string
+     * @return string
+     */
     public static function removeFinalSlash(?string $string): string
     {
         if (empty($string)) {
@@ -29,6 +37,11 @@ class StaticStringService
         }
     }
 
+    /**
+     * @param string $string
+     * @param string $delimeter
+     * @return string
+     */
     public static function camelCaseToUnderScore(string $string, string $delimeter = '_')
     {
         $array = str_split(lcfirst($string),1);
@@ -46,11 +59,19 @@ class StaticStringService
         return join('', $result);
     }
 
+    /**
+     * @param $letter
+     * @return bool
+     */
     public static function isCapital($letter)
     {
         return strtoupper($letter) == $letter;
     }
 
+    /**
+     * @param $className
+     * @return mixed
+     */
     public static function shortClassName($className)
     {
         if (strpos($className,"\\") == false){
@@ -62,6 +83,10 @@ class StaticStringService
         return $a[count($a)-1];
     }
 
+    /**
+     * @param $string
+     * @return string
+     */
     public static function underScoreToCamelCase($string)
     {
         $a = explode('_', $string);
@@ -76,6 +101,10 @@ class StaticStringService
 
     }
 
+    /**
+     * @param $pattern
+     * @return bool
+     */
     public static function isRegex($pattern)
     {
         if (@preg_match($pattern, null) === false) {
@@ -83,6 +112,24 @@ class StaticStringService
         } else {
             return true;
         }
+    }
+
+    /**
+     * @param array $array
+     * @return string
+     */
+    protected function createAttrFromArray(array $array): string
+    {
+        $h = [];
+        foreach ($array as $key => $val) {
+            if ($key == $val) {
+                $h[] = $key;
+            } else {
+                $h[] = $key . '="' . $val . '"';
+            }
+        }
+
+        return join(' ', $h);
     }
 
 }
