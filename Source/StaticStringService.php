@@ -118,7 +118,7 @@ class StaticStringService
      * @param array $array
      * @return string
      */
-    protected function createAttrFromArray(array $array): string
+    public static function createAttrFromArray(array $array): string
     {
         $h = [];
         foreach ($array as $key => $val) {
